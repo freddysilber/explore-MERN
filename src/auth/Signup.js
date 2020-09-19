@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 export default class Signup extends React.Component {
 	constructor() {
@@ -19,21 +20,46 @@ export default class Signup extends React.Component {
 
 	handleSubmit = event => {
 		event.preventDefault()
-		console.log(this.state)
-		// handle auth and then log user in
+
+		axios.post(`${process.env.REACT_APP_SERVER_BASE}/create-user`, this.state)
+			.then(data => {
+				console.log(data)
+			})
+			.catch(error => {
+				console.error(error)
+			})
 	}
 
 	render() {
 		return (
 			<div>
-				<div>Signup/ Login</div>
-				<form onSubmit={this.handleSubmit}>
-					<label>Username: <input type="text" name="username" value={this.state.username} onChange={this.handleChange} /></label>
-					<label>Email: <input type="email" name="email" value={this.state.email} onChange={this.handleChange} /></label>
-					<label>Password: <input type="password" name="password" value={this.state.password} onChange={this.handleChange} /></label>
+				<div><u>Signup/ Login</u></div>
+
+				<form onSubmit={this.handleSubmit} className="signupUp">
+					<label>Username:
+						<input type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" />
+					</label>
+					<label>Email:
+						<input type="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Email" />
+					</label>
+					<label>Password:
+						<input type="password" name="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" />
+					</label>
+
 					<input type="submit" value="Submit" />
 				</form>
 			</div >
 		)
 	}
 }
+
+// function notFound(req, res, next) {
+// 	res.status(404).send({error: 'Not found!', status: 404, url: req.originalUrl})
+//   }
+
+//   // eslint-disable-next-line
+//   function errorHandler(err, req, res, next) {
+// 	console.error('ERROR', err)
+// 	const stack =  process.env.NODE_ENV !== 'production' ? err.stack : undefined
+// 	res.status(500).send({error: err.message, stack, url: req.originalUrl})
+//   }

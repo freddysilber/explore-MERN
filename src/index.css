@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.signupUp > label {
+  display: flex;
+  margin: .75rem;
+  padding: .75rem;
+}
