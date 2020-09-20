@@ -1,4 +1,5 @@
-const DB_NAME = 'explore-mern'
+const DB_NAME = 'explore-mern' // Name of the database to use
+// Info for our test user (admin) Mongo requires at least one user in order to connect to the DB
 const TEST_USER = {
 	username: 'test-user-666',
 	password: 'JNc55seNGFXe3wlW'
