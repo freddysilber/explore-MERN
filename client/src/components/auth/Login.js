@@ -33,10 +33,10 @@ class Login extends Component {
 		}
 	}
 
-	onChange = e => this.setState({ [e.target.id]: e.target.value })
+	onChange = event => this.setState({ [event.target.id]: event.target.value })
 
-	onSubmit = e => {
-		e.preventDefault()
+	onSubmit = event => {
+		event.preventDefault()
 		const userData = {
 			email: this.state.email,
 			password: this.state.password

@@ -31,11 +31,11 @@ class Register extends Component {
 			})
 		}
 	}
+	// Change event from form inputs
+	onChange = event => this.setState({ [event.target.id]: event.target.value })
 
-	onChange = e => this.setState({ [e.target.id]: e.target.value })
-
-	onSubmit = e => {
-		e.preventDefault()
+	onSubmit = event => {
+		event.preventDefault()
 		const newUser = {
 			name: this.state.name,
 			email: this.state.email,

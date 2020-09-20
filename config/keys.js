@@ -5,7 +5,9 @@ const TEST_USER = {
 	password: 'JNc55seNGFXe3wlW'
 }
 
+const { username, password } = TEST_USER
+
 module.exports = {
-	mongoURI: `mongodb+srv://${TEST_USER.username}:${TEST_USER.password}@cluster0.pmzhk.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,
+	mongoURI: `mongodb+srv://${username}:${password}@cluster0.pmzhk.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,
 	secretOrKey: 'secret'
 }
