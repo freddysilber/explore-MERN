@@ -1,6 +1,6 @@
 import { GET_ERRORS } from '../actions/types'
 
-type InitialState = {}
+interface InitialState { }
 
 const initialState: InitialState = {}
 
