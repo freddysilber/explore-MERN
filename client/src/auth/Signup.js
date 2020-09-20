@@ -21,7 +21,8 @@ export default class Signup extends React.Component {
 	handleSubmit = event => {
 		event.preventDefault()
 
-		axios.post(`${process.env.REACT_APP_SERVER_BASE}/create-user`, this.state)
+		axios.post(`${process.env.REACT_APP_SERVER_BASE}/api/users`, this.state)
+			// axios.post(`${process.env.REACT_APP_SERVER_BASE}/create-user`, this.state)
 			.then(data => {
 				console.log(data)
 			})

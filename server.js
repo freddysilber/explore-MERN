@@ -34,4 +34,4 @@ app.use('/api/users', users)
 
 const port = process.env.PORT || 5000
 
-app.listen(port, () => console.log(`Death to all but metal. ${port} !`))
+app.listen(port, () => console.log(`Death to all but metal. http://localhost:${port} !`))
