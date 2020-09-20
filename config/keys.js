@@ -1,5 +1,10 @@
+const DB_NAME = 'explore-mern'
+const TEST_USER = {
+	username: 'test-user-666',
+	password: 'JNc55seNGFXe3wlW'
+}
+
 module.exports = {
-	// mongoURI: 'mongodb://127.0.0.1:27017/?compressors=snappy&gssapiServiceName=mongodb',
-	mongoURI: 'mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb',
+	mongoURI: `mongodb+srv://${TEST_USER.username}:${TEST_USER.password}@cluster0.pmzhk.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,
 	secretOrKey: 'secret'
 }
