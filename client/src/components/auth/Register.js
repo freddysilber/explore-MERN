@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { registerUser } from '../../actions/authActions'
 import classnames from 'classnames'
+import { Button } from '@material-ui/core'
 
 class Register extends Component {
 	constructor() {
@@ -52,16 +53,10 @@ class Register extends Component {
 			<div className='container'>
 				<div className='row'>
 					<div className='col s8 offset-s2'>
-						<Link to='/' className='btn-flat waves-effect'>
-							<i className='material-icons left'>keyboard_backspace</i> Back to
-              				home
-            			</Link>
 						<div className='col s12' style={{ paddingLeft: '11.250px' }}>
-							<h4>
-								<b>Register</b> below
-              				</h4>
+							<h4><b>Register</b></h4>
 							<p className='grey-text text-darken-1'>
-								Already have an account? <Link to='/login'>Log in</Link>
+								Already have an account? <Button component={Link} to="/login">Login</Button>
 							</p>
 						</div>
 						<form noValidate onSubmit={this.onSubmit}>
@@ -110,19 +105,8 @@ class Register extends Component {
 								<label htmlFor='password2'>Confirm Password</label>
 								<span className='red-text'>{errors.password2}</span>
 							</div>
-							<div className='col s12' style={{ paddingLeft: '11.250px' }}>
-								<button
-									style={{
-										width: '150px',
-										borderRadius: '3px',
-										letterSpacing: '1.5px',
-										marginTop: '1rem'
-									}}
-									type='submit'
-									className='btn btn-large waves-effect waves-light hoverable blue accent-3'>
-									Sign up
-                				</button>
-							</div>
+							<br />
+							<Button variant="contained" color="primary" type="submit">Sign up</Button>
 						</form>
 					</div>
 				</div>
