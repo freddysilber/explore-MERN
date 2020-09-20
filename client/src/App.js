@@ -12,7 +12,7 @@ import Landing from './components/layout/Landing'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import PrivateRoute from './components/private-route/PrivateRoute'
-import Dashboard from './components/dashboard/Dashboard'
+import Dashboard from './components/dashboard/Dashboard.js'
 
 import './App.css'
 
@@ -30,7 +30,6 @@ if (localStorage.jwtToken) {
   if (decoded.exp < currentTime) {
     // Logout user
     store.dispatch(logoutUser())
-
     // Redirect to login
     window.location.href = './login'
   }
