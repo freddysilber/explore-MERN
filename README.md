@@ -8,10 +8,10 @@ Sample application for learning the MonogDb, Express, React, and Node.js stack w
 *References
 # About
 This Project uses the following technologies:
-Frontend: [React](https://reactjs.org/) and [React Router](https://reactrouter.com/)
-Backend: [Express](https://expressjs.com/) and [Node](https://nodejs.org/en/)
-Database: [MongoDB](https://www.mongodb.com)
-State Management: [Redux](https://redux.js.org/)
+* Frontend: [React](https://reactjs.org/) and [React Router](https://reactrouter.com/)
+* Backend: [Express](https://expressjs.com/) and [Node](https://nodejs.org/en/)
+* Database: [MongoDB](https://www.mongodb.com)
+* State Management: [Redux](https://redux.js.org/)
 # Getting Started
 ## Configuration
 Make sure to Make sure to add your own MONGOURI from your [mLab](https://mlab.com/) database in config/keys.js.
