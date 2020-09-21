@@ -5,8 +5,8 @@ Sample application for learning the MonogDb, Express, React, and Node.js stack w
 Make sure to Make sure to add your own MONGOURI from your [mLab](https://mlab.com/) database in config/keys.js.
 ```javascript
 module.exports = {
-  mongoURI: "YOUR_MONGO_URI_HERE",
-  secretOrKey: "secret"
+  mongoURI: 'YOUR_MONGO_URI_HERE',
+  secretOrKey: 'secret'
 };
 ```
 1. Install dependencies
