@@ -1,7 +1,7 @@
 # Explore MERN
 Sample application for learning the MonogDb, Express, React, and Node.js stack with authentication using passport and JWTs.
 # Getting Started
-## Configureation
+## Configuration
 Make sure to Make sure to add your own MONGOURI from your [mLab](https://mlab.com/) database in config/keys.js.
 ```javascript
 module.exports = {
@@ -14,6 +14,16 @@ module.exports = {
 * ```cd ../ && npm i```
 2. Start local server(s) for local development
 * Start the server on port 5000 and the client on port 3000 ```npm run dev```
+## Quick Start
+```
+// Install dependencies for server & client
+npm install && npm run client-install
+
+// Run client & server with concurrently
+npm run dev
+
+// Server runs on http://localhost:5000 and client on http://localhost:3000
+```
 # References
 mern-auth:
 [mern-auth](https://github.com/rishipr/mern-auth/)
