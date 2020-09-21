@@ -1,11 +1,11 @@
 # Explore MERN
 Sample application for learning the MonogDb, Express, React, and Node.js stack with authentication using passport and JWTs.
 # Contents
-* About
-* Getting Started
-	* Configuration
-	* Quick Start
-*References
+* [About](#About)
+* [Getting Started](#Getting-Started)
+	* [Configuration](##Configuration)
+	* [Quick Start](##Quick-Start)
+* [References](#References)
 # About
 This Project uses the following technologies:
 * Frontend: [React](https://reactjs.org/) and [React Router](https://reactrouter.com/)
