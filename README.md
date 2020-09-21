@@ -3,8 +3,8 @@ Sample application for learning the MonogDb, Express, React, and Node.js stack w
 # Contents
 * [About](#About)
 * [Getting Started](#Getting-Started)
-	* [Configuration](##Configuration)
-	* [Quick Start](##Quick-Start)
+	* [Configuration](#Configuration)
+	* [Quick Start](#Quick-Start)
 * [References](#References)
 # About
 This Project uses the following technologies:
