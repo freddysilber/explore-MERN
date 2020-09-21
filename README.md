@@ -25,7 +25,5 @@ npm run dev
 // Server runs on http://localhost:5000 and client on http://localhost:3000
 ```
 # References
-mern-auth:
-[mern-auth](https://github.com/rishipr/mern-auth/)
-MongoDb note:
-[Blog for help setting up the Db with mongo](https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-1-c405048e3669)
+* [mern-auth](https://github.com/rishipr/mern-auth/)
+* [Blog for help setting up the Db with mongo](https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-1-c405048e3669)
