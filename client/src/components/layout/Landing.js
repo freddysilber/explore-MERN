@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, ButtonGroup } from '@material-ui/core'
+import { Routes } from '../../utils/routes'
 
 class Landing extends Component {
 	render() {
@@ -18,8 +19,8 @@ class Landing extends Component {
 						<br />
 						<div className='col s6'>
 							<ButtonGroup variant="contained" color="primary">
-								<Button component={Link} to="/register">Register</Button>
-								<Button component={Link} to="/login">Log In</Button>
+								<Button component={Link} to={Routes.register}>Register</Button>
+								<Button component={Link} to={Routes.login}>Log In</Button>
 							</ButtonGroup>
 						</div>
 					</div>

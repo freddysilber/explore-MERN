@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import jwt_decode from 'jwt-decode'
 import setAuthToken from './utils/setAuthToken'
+import { Routes } from './utils/routes'
 
 import { setCurrentUser, logoutUser } from './actions/authActions'
 import { Provider } from 'react-redux'
@@ -42,10 +43,10 @@ class App extends Component {
           <div className='App'>
             <Navbar />
             <Route exact path='/' component={Landing} />
-            <Route exact path='/register' component={Register} />
-            <Route exact path='/login' component={Login} />
+            <Route exact path={Routes.register} component={Register} />
+            <Route exact path={Routes.login} component={Login} />
             <Switch>
-              <PrivateRoute exact path='/dashboard' component={Dashboard} />
+              <PrivateRoute exact path={Routes.dashboard} component={Dashboard} />
             </Switch>
           </div>
         </Router>

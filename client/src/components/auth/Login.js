@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { loginUser } from '../../actions/authActions'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { Button } from '@material-ui/core'
+import { loginUser } from '../../actions/authActions'
+import { Routes } from '../../utils/routes'
 
 class Login extends Component {
 	constructor() {
@@ -19,13 +20,13 @@ class Login extends Component {
 	componentDidMount() {
 		// If logged in and user navigates to Login page, should redirect them to dashboard
 		if (this.props.auth.isAuthenticated) {
-			this.props.history.push('/dashboard')
+			this.props.history.push(Routes.dashboard)
 		}
 	}
 
 	componentWillReceiveProps(nextProps) {
 		if (nextProps.auth.isAuthenticated) {
-			this.props.history.push('/dashboard')
+			this.props.history.push(Routes.dashboard)
 		}
 		if (nextProps.errors) {
 			this.setState({
@@ -57,7 +58,7 @@ class Login extends Component {
 								<b>Login</b>
 							</h4>
 							<p className='grey-text text-darken-1'>
-								Don't have an account? <Button component={Link} to="/register">Register</Button>
+								Don't have an account? <Button component={Link} to={Routes.register}>Register</Button>
 							</p>
 						</div>
 						<form noValidate onSubmit={this.onSubmit}>

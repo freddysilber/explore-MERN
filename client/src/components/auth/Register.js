@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { registerUser } from '../../actions/authActions'
 import classnames from 'classnames'
 import { Button } from '@material-ui/core'
+import { Routes } from '../../utils/routes'
 
 class Register extends Component {
 	constructor() {
@@ -21,7 +22,7 @@ class Register extends Component {
 	componentDidMount() {
 		// If logged in and user navigates to Register page, should redirect them to dashboard
 		if (this.props.auth.isAuthenticated) {
-			this.props.history.push('/dashboard')
+			this.props.history.push(Routes.dashboard)
 		}
 	}
 
@@ -56,7 +57,7 @@ class Register extends Component {
 						<div className='col s12' style={{ paddingLeft: '11.250px' }}>
 							<h4><b>Register</b></h4>
 							<p className='grey-text text-darken-1'>
-								Already have an account? <Button component={Link} to="/login">Login</Button>
+								Already have an account? <Button component={Link} to={Routes.login}>Login</Button>
 							</p>
 						</div>
 						<form noValidate onSubmit={this.onSubmit}>
